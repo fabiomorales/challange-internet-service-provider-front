@@ -1,3 +1,5 @@
+import Flex from './Flex';
+import Link from './Link';
 import Typograph from './Typograph';
 
-export { Typograph };
+export { Link, Flex, Typograph };
