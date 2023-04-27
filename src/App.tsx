@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Dashboard, Home, NoMatch } from './components/pages';
+import { Administrative, Home, NoMatch, Orders, Plans } from './components/pages';
 import { routerPaths } from './utils/routes';
 
 const App: FC = () => {
@@ -8,7 +8,9 @@ const App: FC = () => {
     <Routes>
       <Route path={routerPaths.home.default} element={<Home />} />
       <Route path={routerPaths.noMatch} element={<NoMatch />} />
-      <Route path={routerPaths.dashboard.default} element={<Dashboard />} />
+      <Route path={routerPaths.administrative.default} element={<Administrative />} />
+      <Route path={routerPaths.administrative.orders} element={<Orders />} />
+      <Route path={routerPaths.administrative.plans} element={<Plans />} />
     </Routes>
   );
 };

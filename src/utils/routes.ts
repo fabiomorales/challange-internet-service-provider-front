@@ -2,8 +2,10 @@ export const routerPaths = {
   home: {
     default: '/',
   },
-  dashboard: {
-    default: '/dashboard',
+  administrative: {
+    default: '/administrative',
+    orders: '/administrative/orders',
+    plans: '/administrative/plans',
   },
   noMatch: '*',
 };

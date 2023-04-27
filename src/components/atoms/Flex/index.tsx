@@ -5,6 +5,7 @@ import { flexbox, FlexboxProps, layout, space, SpaceProps, LayoutProps } from 's
 
 type CustomFlexProps = {
   centered?: boolean;
+  gap?: number;
 };
 
 export type FlexProps = CustomFlexProps & HTMLAttributes<HTMLDivElement> & FlexboxProps & SpaceProps & LayoutProps;
@@ -17,11 +18,12 @@ const Centered = css`
 const Flex = styled.div<FlexProps>`
   display: flex;
 
-  ${(props): FlattenInterpolation<ThemeProps<DefaultTheme>> => (props.centered ? Centered : css``)}
-
   ${flexbox}
   ${layout}
   ${space}
+
+  ${(props) => (props.centered ? Centered : css``)}
+  gap: ${(props) => `${props.gap}px`}
 `;
 
 export default Flex;

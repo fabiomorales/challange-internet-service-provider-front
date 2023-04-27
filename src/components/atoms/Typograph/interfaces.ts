@@ -1,20 +1,26 @@
 import { ReactNode } from 'react';
-import StyleGuide from '../../../styles/styleGuide';
+import { SpaceProps, TypographyProps } from 'styled-system';
 import { colors } from '../../../styles/colors';
+import StyleGuide from '../../../styles/styleGuide';
 
 type TextAlign = 'center' | 'end' | 'inherit' | 'initial' | 'justify' | 'left' | 'revert' | 'right' | 'start' | 'unset';
 
-export interface ITypographProps {
-  type: keyof typeof StyleGuide['typography'];
+type TextDecorationLine =
+  | 'none'
+  | 'underline'
+  | 'overline'
+  | 'line-through'
+  | 'underline overline'
+  | 'underline line-through';
+
+export interface ITypographProps extends SpaceProps, TypographyProps {
+  type: keyof (typeof StyleGuide)['typography'];
   as?: keyof JSX.IntrinsicElements;
   color?: keyof typeof colors;
   className?: string;
   cursor?: 'default' | 'pointer';
   textAlign?: TextAlign;
-  mt?: number;
-  mb?: number;
-  mr?: number;
-  ml?: number;
+  textDecorationLine?: TextDecorationLine;
   children?: ReactNode;
   onClick?: () => void;
 }

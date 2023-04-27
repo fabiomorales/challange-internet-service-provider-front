@@ -48,5 +48,6 @@ export const colors = {
   white: '#FFFFFF' as '#FFFFFF',
   black: '#000000' as '#000000',
   textBase: '#5D6670' as '#5D6670',
-  linkBase: '#8ab4f8' as '#8ab4f8',
+  linkBase: '#1e74ff' as '#1e74ff',
+  linkBaseHover: '#8ab4f8' as '#8ab4f8',
 };
