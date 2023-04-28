@@ -1,5 +1,6 @@
 import Input from './Input';
 import Menu from './Menu';
-import OfferCards from './OfferCards';
+import Modal from './Modal';
+import Table from './Table';
 
-export { OfferCards, Menu, Input };
+export { Menu, Input, Modal, Table };
