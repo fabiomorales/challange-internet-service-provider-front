@@ -30,3 +30,29 @@ export const Button = styled.button<IButtonProps>`
 
   ${space}
 `;
+
+export const ActionButton = styled.button<IButtonProps>`
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: ${colors.primary400};
+  cursor: pointer;
+
+  &:hover {
+    background-color: ${colors.primary600};
+  }
+
+  &:active {
+    background-color: ${colors.primary500};
+  }
+
+  &:disabled {
+    background-color: ${colors.secondary600};
+    cursor: not-allowed;
+  }
+
+  ${space}
+`;
