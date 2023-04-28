@@ -26,6 +26,7 @@ const Layout: FC<IMenuProps> = ({ menuItem, title, children }) => {
         alignItems="center"
         width="100%"
         minHeight="100%"
+        flex={1}
         padding={16}
       >
         {title && (
