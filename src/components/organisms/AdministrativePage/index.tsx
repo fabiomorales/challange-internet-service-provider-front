@@ -1,22 +1,13 @@
 import { FC } from 'react';
-import { Menu } from '../../molecules';
 import { useNavigate } from 'react-router-dom';
 import { routerPaths } from '../../../utils/routes';
-import { Layout } from '../../templates';
-import * as S from './styles';
 import { Button } from '../../atoms';
+import { Layout } from '../../templates';
+import MenuItems from './components/MenuItems';
+import * as S from './styles';
 
 const AdministrativePage: FC = () => {
   const navigate = useNavigate();
-
-  const MenuItems = () => {
-    return (
-      <>
-        <Menu.MenuItem label="Planos" onClick={() => navigate(routerPaths.home.default)} />
-        <Menu.MenuItem label="Administrativo" onClick={() => navigate(routerPaths.administrative.default)} />
-      </>
-    );
-  };
 
   return (
     <Layout title="Administrativo" menuItem={<MenuItems />}>

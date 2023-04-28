@@ -25,18 +25,17 @@ const Plans: FC = () => {
   const {
     register,
     handleSubmit,
-    getValues,
     formState: { errors },
   } = useForm<LoginSubmitParams>();
 
-  const handleLoginSubmit = (params: any) => {
+  const handlePlanSubmit = (params: any) => {
     console.log('params', params);
   };
 
   return (
     <>
       <Layout title="Planos">
-        <form onSubmit={handleSubmit(handleLoginSubmit)}>
+        <form onSubmit={handleSubmit(handlePlanSubmit)}>
           <Input
             type="number"
             label="CPF"
