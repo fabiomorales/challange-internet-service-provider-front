@@ -18,7 +18,7 @@ export interface ITypographProps extends SpaceProps, TypographyProps {
   as?: keyof JSX.IntrinsicElements;
   color?: keyof typeof colors;
   className?: string;
-  cursor?: 'default' | 'pointer';
+  cursor?: 'default' | 'pointer' | 'inherit';
   textAlign?: TextAlign;
   textDecorationLine?: TextDecorationLine;
   children?: ReactNode;
