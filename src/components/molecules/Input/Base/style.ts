@@ -65,8 +65,7 @@ export const InputContainer = styled.div<StyledInputContainerProps>`
   display: flex;
   align-items: center;
   border-radius: 20px;
-  border: 1px solid transparent;
-  transition: border 0.2s, box-shadow 0.1s;
+  border: 1px solid ${colors.primary900};
 
   ${({ disabled }) =>
     disabled &&
