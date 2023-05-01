@@ -82,7 +82,7 @@ const Apps: FC<Partial<IApps>> = ({
             listBenefitsIncluded?.map((app, key) => (
               <S.LiApps as={'li'} key={key} variant={variant}>
                 <Flex gap={5} as={'span'} justifyContent="flex-start" alignItems="center" width={'100%'} mb={9}>
-                  <S.ImageCard as={'li'} key={key}>
+                  <S.ImageCard as={'span'}>
                     <Image src={`../src/assets/images/${app.img}.png`} alt={app.description} size={50} />
                   </S.ImageCard>
                   {variant === 'editing' && <Typograph type="bodyTextRegular">{app.description}</Typograph>}
@@ -124,7 +124,7 @@ const Apps: FC<Partial<IApps>> = ({
             listBenefitsToInclude?.map((app, key) => (
               <S.LiApps as={'li'} key={key} variant={variant}>
                 <Flex gap={5} as={'span'} justifyContent="flex-start" alignItems="center" width={'100%'} mb={9}>
-                  <S.ImageCard as={'li'} key={key}>
+                  <S.ImageCard as={'span'}>
                     <Image src={`../src/assets/images/${app.img}.png`} alt={app.description} size={50} />
                   </S.ImageCard>
                   <Typograph type="bodyTextRegular">{app.description}</Typograph>
