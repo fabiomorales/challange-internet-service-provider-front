@@ -3,9 +3,11 @@ import { InputHTMLAttributes, HTMLInputTypeAttribute, ReactNode, ChangeEvent } f
 export type StatusType = 'error';
 
 export interface InputBaseProps {
-  type?: Exclude<HTMLInputTypeAttribute, 'checkbox' | 'password' | Record<any, any>>;
+  type?: Exclude<HTMLInputTypeAttribute, 'checkbox' | 'password' | 'radio' | Record<any, any>>;
   label?: string;
   mask?: string;
+  isMaskCurrency?: boolean;
+  initialCurrencyMask?: string;
   status?: StatusType;
   suffix?: string;
   prefix?: string;
@@ -23,8 +25,16 @@ export interface InputCheckboxBaseProps {
   message?: string;
 }
 
+export interface InputRadioProps {
+  type: 'radio';
+  label: string;
+  status?: StatusType;
+  message?: string;
+}
+
 export interface StyledInputMessageProps {
   $status?: StatusType;
 }
 
-export type InputProps = InputHTMLAttributes<HTMLInputElement> & (InputBaseProps | InputCheckboxBaseProps);
+export type InputProps = InputHTMLAttributes<HTMLInputElement> &
+  (InputBaseProps | InputCheckboxBaseProps | InputRadioProps);

@@ -5,7 +5,7 @@ export interface IOrder {
   customerName: string;
   customerEmail: string;
   customerPhone: string;
-  planId: string;
+  planName: string;
   status: 'IN_PROGRESS' | 'DONE';
 }
 

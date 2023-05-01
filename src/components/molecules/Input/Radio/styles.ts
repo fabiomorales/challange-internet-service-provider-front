@@ -30,8 +30,8 @@ export const InputCheckboxLabel = styled.label`
     border-radius: 7px;
     border-style: solid;
     border-width: 1px;
-    border-color: ${colors.secondary400};
-    background-color: ${colors.secondary200};
+    border-color: ${colors.secondary100};
+    background-color: ${colors.secondary100};
     transition: background-color 0.2s, border-color 0.2s;
   }
 
@@ -68,7 +68,7 @@ export const InputCheckbox = styled.input`
   }
 
   &:not(:disabled):is(:hover, :active, :focus-visible) + ${InputCheckboxLabelWrapper} ${InputCheckboxLabel}:before {
-    border-color: ${colors.secondary600};
+    border-color: ${colors.primary100};
   }
 
   &:disabled + ${InputCheckboxLabelWrapper} {

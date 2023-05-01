@@ -13,7 +13,7 @@ const TableOrder: FC<ITableOrderProps> = ({ listOrders }) => {
     { name: 'Nome' },
     { name: 'Email' },
     { name: 'Telefone' },
-    { name: 'ID do Plano' },
+    { name: 'Nome do Plano' },
     { name: 'Status' },
     { name: 'Ação' },
   ];
@@ -32,7 +32,7 @@ const TableOrder: FC<ITableOrderProps> = ({ listOrders }) => {
           <Table.TD>{order.customerName}</Table.TD>
           <Table.TD>{order.customerEmail}</Table.TD>
           <Table.TD>{order.customerPhone}</Table.TD>
-          <Table.TD>{order.planId}</Table.TD>
+          <Table.TD>{order.planName}</Table.TD>
           <StatusOrder status={order.status} />
           <Table.TD>
             <Button.ActionButton

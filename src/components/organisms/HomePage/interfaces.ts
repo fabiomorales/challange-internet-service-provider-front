@@ -8,13 +8,12 @@ export interface IServices {
   services: Array<IListBenefits>;
 }
 
-export interface IPlanosResponse {
-  id: number;
+export interface IOrderSubmitParams {
   name: string;
-  velocity: number;
-  unitType: string;
-  price: number;
-  bestPlan: boolean;
-  benefits: Array<IListBenefits>;
-  apps: Array<IApps>;
+  email: string;
+  phone: string;
+}
+
+export interface IOrderFormProps {
+  planId: string;
 }

@@ -24,7 +24,7 @@ export const InputLabel = styled.label<StyledInputLabelProps>`
       return css`
         font-size: 14px;
         transform: translateY(-135%);
-        color: ${colors.secondary400};
+        color: ${colors.secondary500};
       `;
 
     return css`

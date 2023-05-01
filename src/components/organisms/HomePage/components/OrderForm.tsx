@@ -6,17 +6,8 @@ import { useModalProvider } from '../../../../context/modal/ModalProvider';
 import { ICreateOrderRequest, createOrderService } from '../../../../services/orders/CreateOrderService';
 import { Button, Flex, Typograph } from '../../../atoms';
 import { Input } from '../../../molecules';
+import { IOrderFormProps, IOrderSubmitParams } from '../interfaces';
 import * as S from '../styles';
-
-export interface IOrderSubmitParams {
-  name: string;
-  email: string;
-  phone: string;
-}
-
-export interface IOrderFormProps {
-  planId: string;
-}
 
 const OrderForm: FC<IOrderFormProps> = ({ planId }) => {
   const { setModal } = useModalProvider();
@@ -27,7 +18,7 @@ const OrderForm: FC<IOrderFormProps> = ({ planId }) => {
     return (
       <Flex flexDirection="column">
         <Typograph type="headingsH3SemiBold" color="primary500" mb={15}>
-          Formulário enviado co sucesso, aguarde nosso contato!
+          Formulário enviado com sucesso, aguarde nosso contato!
         </Typograph>
       </Flex>
     );
@@ -52,7 +43,7 @@ const OrderForm: FC<IOrderFormProps> = ({ planId }) => {
     formState: { errors, isSubmitting, isValid },
   } = useForm<IOrderSubmitParams>({ defaultValues, resolver: yupResolver(validationSchema), mode: 'onBlur' });
 
-  const handleLoginSubmit = async (params: IOrderSubmitParams) => {
+  const handleOrderSubmit = async (params: IOrderSubmitParams) => {
     setButtonLoader(true);
     const createOrderRequest: ICreateOrderRequest = {
       planId,
@@ -73,7 +64,7 @@ const OrderForm: FC<IOrderFormProps> = ({ planId }) => {
       <Typograph type="headingsH3SemiBold" mb={15}>
         Preencha o formulário
       </Typograph>
-      <S.Form onSubmit={handleSubmit(handleLoginSubmit)}>
+      <S.Form onSubmit={handleSubmit(handleOrderSubmit)}>
         <Input
           type="text"
           label="Nome"
